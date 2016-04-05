@@ -1,3 +1,5 @@
+var http = require('http');
+var port = process.env.PORT || 8090;
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
@@ -69,5 +71,5 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-app.listen(8090);
+app.listen(port);
 console.log('listening on port 8090');
